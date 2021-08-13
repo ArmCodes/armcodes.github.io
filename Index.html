@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Send Easy</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0 " >
+   <style>
+    body{
+      display:flex;
+      height:100vh;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      color:#123874;
+      background:#8E44AD;
+      font-family:Roboto;
+    } 
+    h1{
+      font-family:Ubuntu;
+      color:#123874;
+      text-align:center ;
+      text-shadow: 4px 1px 1px #123874;
+    } 
+    .atEasy{
+      font-family:simson;
+      font-weight:lighter;
+      margin-top:20px ;
+      text-shadow:none;
+      width:fit-content;
+      border-radius:0 15px;
+      background:turquoise;
+      padding:2px;
+    }
+    .easy{
+      
+    }
+    .container{
+      display:inline-block;
+      height:300px;
+      width:90%;
+      text-align:center;
+      border:1px solid black;
+      border-radius:20px;
+      padding-top:40px;
+    }
+    input{
+      display:inline-block;
+      width:70%;
+      height:40px;
+      margin-bottom:10px;
+      border:2px solid #042331;
+      border-radius:10px;
+      outline:none;
+      text-align:center;
+      font-size:25px;
+      color:#123874;
+      background:#042331;
+    } 
+    .label{
+      font-size:20px;
+      
+    } 
+    .send{
+      display:inline-block;
+      width:70px;
+      margin-top:20px;
+      margin-left:4%;
+      font-size:22px;
+      padding:1px;
+      font-weight:600;
+      font-family:Roboto;
+      background:transparent ;
+    }
+#name_{
+   font-size:30px;
+   font-weight:600;
+} 
+   </style>
+  </head>
+  <body>
+   <!--<h1>MALISH GROUP <span class="easy">LTD. </span><br/><span class="atEasy" >Airtime</span></h1>-->
+   <img src="Images/logo.jpg" alt="LOGO" style="width:100px; height:100px; border-radius:50%;"><br/>
+   <span id="name_">Easy Loader</span>
+   <div class="container">
+   <form name="myform" method="post" action="_blank" onsubmit="return validateform()" >
+    <span class="label" ></span>
+     <input type="number" name="name" placeholder="Mobile number" ><br/><span class="label" ></span>
+     <input type="number" value="" name="amount" min="100" max="2500" placeholder="Amount" required><br/><span class="label" ></span>
+     <input type="number" name="password" placeholder="Pin" ><br/>
+     
+     <input type="submit" value="SEND" class="send">  
+   </form>  
+   </div>
+   <footer>
+    <p>© 2021 ARM Codes - All Rights Reserved
+   </footer>
+   <script>  
+  var code="*146*";
+  var asterik="*";
+  var pounds="#";
+function validateform(){  
+  var name=document.myform.name.value;  
+  var password=document.myform.password.value;  
+  var amount=document.myform.amount.value;
+    
+  if (name==null || name==""){
+    alert("Fill the boxes to send Airtime");  
+    return false;  
+  }else if(password==15698){  
+    window.open("tel:" + code + "7*" + name + asterik + amount + "*" + password + "#");  
+    return true;  
+    }else {
+      alert("Invalid pin");
+      return false;
+   } 
+  }  
+   </script>
+  </body>
+</html>
